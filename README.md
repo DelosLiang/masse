@@ -141,7 +141,7 @@ We aim to analyze a racking system located in Nanaimo, BC. The problem descripti
 
 > A racking system in Nanaimo, BC. This system has 2 bays with 8.0 ft beam length; there are 3 pallets on each beam. The beam is a 4 inch Z-section beam; on the side elevation the gap between two posts is 3.5 ft wide and the post is 16.0 ft tall with three floors at 4.0 ft, 8.5 ft and 13.0 ft; pallet weights are 1250 lbs at 4.0 ft, 750 lbs at 8.5 ft, 500 lbs at 13.0 ft. The columns are steel U-channels (3.079 in x 2.795 in x 0.0787 in, 16.0 ft long, E = 29,000 kip/in^2) and the braces are steel U-channels (1.0 in x 1.0 in x 0.054 in, length 4.3 ft). Two elastic beam-columns run from (0, 0)->(0, 16.0) and (3.5, 0)->(3.5, 16.0). 8 pin-ended truss braces link (0, 0.5)->(3.5, 0.5), (3.5, 0.5)->(0, 3), (0, 3)->(3.5, 5.5), (3.5, 5.5)->(0, 8), (0, 8)->(3.5, 10.5), (3.5, 10.5)->(0, 13), (0, 13)->(3.5, 15.5), (3.5, 15.5)->(0, 15.5). Fixed supports at (0, 0) and (3.5, 0). Point loads applied to the left column at 4.0 ft, 8.5 ft, 13.0 ft. Coordinates in feet (1 ft = 12 in), forces in kip, stiffness in kip/in^2.
 
-![Racking System](assets/racking_system.png)
+![Racking System](assets/racking system.png)
 
 The goal is to determine whether this racking system is structurally adequate under the specified loading conditions, following Canadian building code requirements for seismic analysis in Nanaimo, BC.
 
