@@ -61,6 +61,9 @@ class MASSEInterface:
         # Create UI
         self.create_widgets()
         
+        # Set up window close protocol to exit process
+        self.root.protocol("WM_DELETE_WINDOW", self.on_closing)
+        
     def load_problem_data(self):
         """Load problem descriptions from dataset folder"""
         try:
@@ -513,6 +516,21 @@ class MASSEInterface:
         """Re-enable the run button"""
         self.is_running = False
         self.run_button.config(state="normal", text="🚀 Run Analysis")
+    
+    def on_closing(self):
+        """Handle window close event"""
+        if self.is_running:
+            # If analysis is running, ask for confirmation
+            if messagebox.askokcancel("Quit", "Analysis is in progress. Do you want to quit?"):
+                self.is_running = False
+                self.root.quit()
+                self.root.destroy()
+                sys.exit(0)
+        else:
+            # Normal exit
+            self.root.quit()
+            self.root.destroy()
+            sys.exit(0)
 
 def main():
     """Main program entry point - launches UI"""
