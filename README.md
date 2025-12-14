@@ -2,6 +2,8 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2510.11004-b31b1b.svg?logo=arxiv)](https://arxiv.org/abs/2510.11004) [![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Dataset-yellow)](https://huggingface.co/datasets/NateLiang/MASSE)
 
+[🔬 Analogy](#analogy-of-future-humanai-collaborations) | [🏗️ MASSE Framework](#masse-framework) | [⚡ Installation](#installation) | [🔑 Required APIs](#required-apis) | [📦 MASSE Package](#masse-package) | [🚀 Running an Example](#running-an-example) | [🎬 Demo](https://www.youtube.com/watch?v=G_22QBsevQ8) | [🤝 Contributing](#contributing) | [⚠️ Disclaimer](#disclaimer) | [📄 Citation](#citation)
+
 ## Analogy of future human–AI collaborations
 
 Traditional practice relies on long apprenticeships, with senior engineers transferring expertise to junior engineers through mentorship and problem solving. In contrast, LLM-based multi-agent systems instantiate scalable junior engineer agents that inherit workflows, perform specialized tasks, and coordinate under senior engineers' oversight. As these systems evolve toward self-planning and adaptive learning, fully agentic hierarchies—with senior engineer agent directing junior engineer agents—could transform engineering into a continuously improving, highly efficient practice.
