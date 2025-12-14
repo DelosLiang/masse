@@ -64,7 +64,10 @@ class MASSEInterface:
     def load_problem_data(self):
         """Load problem descriptions from dataset folder"""
         try:
-            with open("dataset/problem_descriptions.json", 'r', encoding='utf-8') as f:
+            # Get the directory where this script is located
+            script_dir = os.path.dirname(os.path.abspath(__file__))
+            dataset_path = os.path.join(script_dir, "dataset", "problem_descriptions.json")
+            with open(dataset_path, 'r', encoding='utf-8') as f:
                 return json.load(f)
         except Exception as e:
             messagebox.showerror("Error", f"Failed to load problem data: {e}")
