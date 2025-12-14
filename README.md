@@ -80,7 +80,7 @@ touch .env
 
 ### Implementation Details
 
-The `MASSE` system is built with `AutoGen` for flexibility and modularity. The framework uses `gpt-4o` as the default LLM model for all agents. For testing purposes, we recommend using `o4-mini` or `gpt-3.5-turbo` to save costs, as the framework makes many API calls during the multi-agent workflow.
+The `MASSE` system is built with `AutoGen` for flexibility and modularity. The framework uses `gpt-4o` as the default LLM model for all agents. For testing purposes, we recommend using `gpt-4o` or `gpt-3.5-turbo` to save costs, as the framework makes many API calls during the multi-agent workflow.
 
 ### Python Usage
 
