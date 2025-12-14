@@ -36,6 +36,44 @@ The Management Team oversees and coordinates the overall MASSE workflow, transfo
 
 ## Installation
 
+- **Clone MASSE:**
+  ```bash
+  git clone https://github.com/yourusername/masse.git
+  cd masse
+  ```
+
+- **Create a virtual environment in any of your favorite environment managers:**
+  ```bash
+  conda create -n masse python=3.10
+  conda activate masse
+  ```
+
+- **Install dependencies:**
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+## Required APIs
+
+You will need the OpenAI API for all the agents (default configuration), and optionally the Anthropic API if you want to use Claude models.
+
+```bash
+export OPENAI_API_KEY=$YOUR_OPENAI_API_KEY
+export ANTHROPIC_API_KEY=$YOUR_ANTHROPIC_API_KEY
+```
+
+Alternatively, you can create a `.env` file in the project root with your API keys:
+
+```bash
+# Create .env file
+touch .env
+# Edit .env with your actual API keys:
+# OPENAI_API_KEY=your_openai_api_key_here
+# ANTHROPIC_API_KEY=your_anthropic_api_key_here
+```
+
+**Note:** The system uses OpenAI's GPT-4o model by default. You can modify the LLM provider settings in `masseagents/default_config.py` to use different models or providers.
+
 ## MASSE Package
 
 ## Contributing
