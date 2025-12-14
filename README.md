@@ -40,6 +40,8 @@ The Management Team oversees and coordinates the overall MASSE workflow, transfo
 
 ## Contributing
 
+We welcome contributions from the community! Whether it's fixing a bug, improving documentation, or suggesting a new feature, your input helps make this project better. We welcome collaboration from both industry and academy. If you are interested in this line of research, please contact me at [hliang7@ualberta.ca](mailto:hliang7@ualberta.ca) ([Google Scholar](https://scholar.google.com/citations?user=0z0KKtsAAAAJ&hl=en)) or the head of lab Dr. Qipei (Gavin) Mei at [qipei.mei@ualberta.ca](mailto:qipei.mei@ualberta.ca) ([Google Scholar](https://scholar.google.com/citations?user=06VJSBgAAAAJ&hl=en)).
+
 ## Disclaimer
 
 ## Citation
