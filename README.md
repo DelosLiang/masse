@@ -95,8 +95,8 @@ config = get_default_config()
 workflow = StructuralAnalysisWorkflow(config)
 
 # Run analysis
-problem_description = "A 3-story warehouse building in Vancouver, BC..."
-result = workflow.run_full_analysis(problem_description, location="Vancouver, BC", problem_id="1")
+problem_description = "A racking system in Nanaimo, BC. This system has 2 bays with 8.0 ft beam length; there are 3 pallets on each beam. The beam is a 4 inch Z-section beam; on the side elevation the gap between two posts is 3.5 ft wide and the post is 16.0 ft tall with three floors at 4.0 ft, 8.5 ft and 13.0 ft; pallet weights are 1250 lbs at 4.0 ft, 750 lbs at 8.5 ft, 500 lbs at 13.0 ft. The columns are steel U-channels (3.079 in x 2.795 in x 0.0787 in, 16.0 ft long, E = 29,000 kip/in^2) and the braces are steel U-channels (1.0 in x 1.0 in x 0.054 in, length 4.3 ft). Two elastic beam-columns run from (0, 0)->(0, 16.0) and (3.5, 0)->(3.5, 16.0). 8 pin-ended truss braces link (0, 0.5)->(3.5, 0.5), (3.5, 0.5)->(0, 3), (0, 3)->(3.5, 5.5), (3.5, 5.5)->(0, 8), (0, 8)->(3.5, 10.5), (3.5, 10.5)->(0, 13), (0, 13)->(3.5, 15.5), (3.5, 15.5)->(0, 15.5). Fixed supports at (0, 0) and (3.5, 0). Point loads applied to the left column at 4.0 ft, 8.5 ft, 13.0 ft. Coordinates in feet (1 ft = 12 in), forces in kip, stiffness in kip/in^2."
+result = workflow.run_full_analysis(problem_description, location="Nanaimo, BC", problem_id="1")
 
 # Access results
 print(f"Final Result: {result['final_result']}")
@@ -123,8 +123,8 @@ workflow = StructuralAnalysisWorkflow(config, log_dir="logs/custom_analysis")
 
 # Run analysis
 result = workflow.run_full_analysis(
-    problem_description="Your problem description here...",
-    location="Vancouver, BC",
+    problem_description="A racking system in Nanaimo, BC. This system has 2 bays with 8.0 ft beam length; there are 3 pallets on each beam. The beam is a 4 inch Z-section beam; on the side elevation the gap between two posts is 3.5 ft wide and the post is 16.0 ft tall with three floors at 4.0 ft, 8.5 ft and 13.0 ft; pallet weights are 1250 lbs at 4.0 ft, 750 lbs at 8.5 ft, 500 lbs at 13.0 ft. The columns are steel U-channels (3.079 in x 2.795 in x 0.0787 in, 16.0 ft long, E = 29,000 kip/in^2) and the braces are steel U-channels (1.0 in x 1.0 in x 0.054 in, length 4.3 ft). Two elastic beam-columns run from (0, 0)->(0, 16.0) and (3.5, 0)->(3.5, 16.0). 8 pin-ended truss braces link (0, 0.5)->(3.5, 0.5), (3.5, 0.5)->(0, 3), (0, 3)->(3.5, 5.5), (3.5, 5.5)->(0, 8), (0, 8)->(3.5, 10.5), (3.5, 10.5)->(0, 13), (0, 13)->(3.5, 15.5), (3.5, 15.5)->(0, 15.5). Fixed supports at (0, 0) and (3.5, 0). Point loads applied to the left column at 4.0 ft, 8.5 ft, 13.0 ft. Coordinates in feet (1 ft = 12 in), forces in kip, stiffness in kip/in^2.",
+    location="Nanaimo, BC",
     problem_id="1"
 )
 ```
