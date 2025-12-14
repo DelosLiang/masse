@@ -1141,6 +1141,8 @@ plt.show()'''
             
             # Write script file (save in session directory)
             script_path = os.path.join(base_dir, "structural_model_exec.py")
+            # Ensure we return an absolute path
+            script_path = os.path.normpath(os.path.abspath(script_path))
             with open(script_path, "w", encoding='utf-8') as f:
                 f.write('\n'.join(code_lines))
             return script_path
@@ -1156,12 +1158,27 @@ plt.show()'''
             
             # Ensure script path is absolute
             if not os.path.isabs(script_path):
-                base_dir = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))  # masse_new directory
+                # Use session_dir if available, otherwise use project root
+                if self.session_dir:
+                    base_dir = self.session_dir
+                else:
+                    base_dir = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
                 script_path = os.path.join(base_dir, script_path)
+            
+            # Normalize path to handle any path separators correctly
+            script_path = os.path.normpath(os.path.abspath(script_path))
             
             # Get script directory, ensure running in correct directory
             script_dir = os.path.dirname(script_path)
             script_name = os.path.basename(script_path)
+            
+            # Verify script file exists
+            if not os.path.exists(script_path):
+                raise FileNotFoundError(f"OpenSees script not found: {script_path}")
+            
+            # Verify script directory exists
+            if not os.path.isdir(script_dir):
+                raise NotADirectoryError(f"Script directory does not exist: {script_dir}")
             
             # Run in script directory
             result = subprocess.run(
