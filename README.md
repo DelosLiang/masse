@@ -1,6 +1,6 @@
 # Automating Structural Engineering Workflows with Large Language Model Agents
 
-[![arXiv](https://img.shields.io/badge/arXiv-2510.11004-b31b1b.svg?logo=arxiv)](https://arxiv.org/abs/2510.11004)
+[![arXiv](https://img.shields.io/badge/arXiv-2510.11004-b31b1b.svg?logo=arxiv)](https://arxiv.org/abs/2510.11004) [![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Dataset-yellow)](https://huggingface.co/datasets/NateLiang/MASSE)
 
 ## Analogy of future human–AI collaborations
 
