@@ -131,6 +131,57 @@ result = workflow.run_full_analysis(
 
 The default configuration uses OpenAI's GPT-4o model. You can modify the LLM provider settings in `masseagents/default_config.py` to use different models (OpenAI or Anthropic) or adjust other system parameters. The full list of configurations can be viewed in `masseagents/default_config.py`.
 
+## Running an Example
+
+This section demonstrates how to use MASSE to analyze a structural engineering problem. We will solve a racking system design problem to illustrate the workflow.
+
+### Problem Description
+
+We aim to analyze a racking system located in Nanaimo, BC. The problem description is as follows:
+
+> A racking system in Nanaimo, BC. This system has 2 bays with 8.0 ft beam length; there are 3 pallets on each beam. The beam is a 4 inch Z-section beam; on the side elevation the gap between two posts is 3.5 ft wide and the post is 16.0 ft tall with three floors at 4.0 ft, 8.5 ft and 13.0 ft; pallet weights are 1250 lbs at 4.0 ft, 750 lbs at 8.5 ft, 500 lbs at 13.0 ft. The columns are steel U-channels (3.079 in x 2.795 in x 0.0787 in, 16.0 ft long, E = 29,000 kip/in^2) and the braces are steel U-channels (1.0 in x 1.0 in x 0.054 in, length 4.3 ft). Two elastic beam-columns run from (0, 0)->(0, 16.0) and (3.5, 0)->(3.5, 16.0). 8 pin-ended truss braces link (0, 0.5)->(3.5, 0.5), (3.5, 0.5)->(0, 3), (0, 3)->(3.5, 5.5), (3.5, 5.5)->(0, 8), (0, 8)->(3.5, 10.5), (3.5, 10.5)->(0, 13), (0, 13)->(3.5, 15.5), (3.5, 15.5)->(0, 15.5). Fixed supports at (0, 0) and (3.5, 0). Point loads applied to the left column at 4.0 ft, 8.5 ft, 13.0 ft. Coordinates in feet (1 ft = 12 in), forces in kip, stiffness in kip/in^2.
+
+![Racking System](assets/racking_system.png)
+
+The goal is to determine whether this racking system is structurally adequate under the specified loading conditions, following Canadian building code requirements for seismic analysis in Nanaimo, BC.
+
+### Using the Graphical Interface
+
+MASSE provides a user-friendly graphical interface for running structural analyses. Launch the interface by running:
+
+```bash
+python main.py
+```
+
+![UI Example](assets/ui_example.png)
+
+The interface consists of several key components:
+
+- **Left Panel - Analysis Controls:**
+  - **Problem ID**: Select or enter a problem ID (1-100) from the dataset
+  - **LLM Model**: Choose the language model to use (e.g., `gpt-4o`, `claude-3-5-sonnet-latest`, `o4-mini`)
+  - **Problem Description**: Displays the loaded problem description in a scrollable text area
+  - **Run Analysis Button**: Initiates the multi-agent analysis workflow
+
+- **Right Panel - Geometry Visualization:**
+  - Displays a visual representation of the structural system
+  - Shows columns (in red), braces (in blue), supports, and applied loads
+  - Updates automatically when a problem is loaded
+
+- **Status Bar**: Shows the current status of the analysis (e.g., "Ready", "Running analysis...", "Analysis completed")
+
+To run the example:
+
+1. Launch the interface using `python main.py`
+2. Enter or select the problem ID corresponding to the racking system
+3. Click "Load Problem" to load the problem description and visualize the geometry
+4. Select your preferred LLM model
+5. Click "🚀 Run Analysis" to start the multi-agent workflow
+6. Wait for the analysis to complete (the system will coordinate multiple specialized agents)
+7. Review the results, which are saved in `logs/<model_name>/problem_<id>/`
+
+The analysis results include detailed information about building parameters, seismic loads, structural model, internal forces, and the final safety assessment.
+
 ## Contributing
 
 We welcome contributions from the community! Whether it's fixing a bug, improving documentation, or suggesting a new feature, your input helps make this project better. We welcome collaboration from both industry and academy. If you are interested in this line of research, please contact me at [hliang7@ualberta.ca](mailto:hliang7@ualberta.ca) ([Google Scholar](https://scholar.google.com/citations?user=0z0KKtsAAAAJ&hl=en)) or the head of lab Dr. Qipei (Gavin) Mei at [qipei.mei@ualberta.ca](mailto:qipei.mei@ualberta.ca) ([Google Scholar](https://scholar.google.com/citations?user=06VJSBgAAAAJ&hl=en)).
