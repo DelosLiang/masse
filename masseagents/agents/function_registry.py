@@ -146,7 +146,7 @@ class FunctionRegistry:
             raise RuntimeError(f"Generated model missing braces: found {len(truss_elements)}, expected at least 1")
     
     def register_all_functions(self, agents: Dict[str, ConversableAgent], user_proxy: UserProxyAgent):
-        """注册所有函数到agents和user_proxy - 一次性完成"""
+        """Register all functions to agents and user_proxy - one-time setup"""
         
         # =====================
         # Step 1: Problem decomposition
