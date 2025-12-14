@@ -76,6 +76,61 @@ touch .env
 
 ## MASSE Package
 
+### Implementation Details
+
+The `MASSE` system is built with `AutoGen` for flexibility and modularity. The framework uses `gpt-4o` as the default LLM model for all agents. For testing purposes, we recommend using `o4-mini` or `gpt-3.5-turbo` to save costs, as the framework makes many API calls during the multi-agent workflow.
+
+### Python Usage
+
+You can use `MASSE` within your Python code by importing the `masseagents` module and initializing a `StructuralAnalysisWorkflow()` object. The `.run_full_analysis()` function returns the analysis results. Alternatively, you can run `main.py` to use the graphical interface.
+
+**Basic Usage:**
+
+```python
+from masseagents.workflows.structural_workflow import StructuralAnalysisWorkflow
+from masseagents.default_config import get_default_config
+
+# Initialize workflow with default configuration
+config = get_default_config()
+workflow = StructuralAnalysisWorkflow(config)
+
+# Run analysis
+problem_description = "A 3-story warehouse building in Vancouver, BC..."
+result = workflow.run_full_analysis(problem_description, location="Vancouver, BC", problem_id="1")
+
+# Access results
+print(f"Final Result: {result['final_result']}")
+print(f"Safety Status: {result['safety_status']}")
+```
+
+The default configuration can be adjusted for LLMs, temperature, max rounds, etc.
+
+**Custom Configuration:**
+
+```python
+from masseagents.workflows.structural_workflow import StructuralAnalysisWorkflow
+from masseagents.default_config import get_default_config
+
+# Create custom configuration
+config = get_default_config()
+config["llm_model"] = "claude-3-5-sonnet-latest"  # Use a different model
+config["temperature"] = 0  # Set temperature
+config["max_round"] = 10  # Increase max rounds
+config["max_tokens"] = 4000  # Adjust max tokens
+
+# Initialize workflow with custom config
+workflow = StructuralAnalysisWorkflow(config, log_dir="logs/custom_analysis")
+
+# Run analysis
+result = workflow.run_full_analysis(
+    problem_description="Your problem description here...",
+    location="Vancouver, BC",
+    problem_id="1"
+)
+```
+
+The default configuration uses OpenAI's GPT-4o model. You can modify the LLM provider settings in `masseagents/default_config.py` to use different models (OpenAI or Anthropic) or adjust other system parameters. The full list of configurations can be viewed in `masseagents/default_config.py`.
+
 ## Contributing
 
 We welcome contributions from the community! Whether it's fixing a bug, improving documentation, or suggesting a new feature, your input helps make this project better. We welcome collaboration from both industry and academy. If you are interested in this line of research, please contact me at [hliang7@ualberta.ca](mailto:hliang7@ualberta.ca) ([Google Scholar](https://scholar.google.com/citations?user=0z0KKtsAAAAJ&hl=en)) or the head of lab Dr. Qipei (Gavin) Mei at [qipei.mei@ualberta.ca](mailto:qipei.mei@ualberta.ca) ([Google Scholar](https://scholar.google.com/citations?user=06VJSBgAAAAJ&hl=en)).
