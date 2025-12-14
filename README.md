@@ -8,21 +8,13 @@ Traditional practice relies on long apprenticeships, with senior engineers trans
 
 ![Analogy of future human–AI collaborations](assets/analogy.png)
 
-## MASSE Framework
+## Installation
 
-![MASSE Framework](assets/pipeline.png)
+## MASSE Package
 
-### Analyst Team
+## Contributing
 
-![Analyst Team](assets/analyst_team.png)
-
-### Engineer Team
-
-![Engineer Team](assets/engineer_team.png)
-
-### Manager Team
-
-![Manager Team](assets/safety_manager.png)
+## Disclaimer
 
 ## Citation
 
