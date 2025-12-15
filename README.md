@@ -1,8 +1,6 @@
 # Automating Structural Engineering Workflows with Large Language Model Agents
 
-[![arXiv](https://img.shields.io/badge/arXiv-2510.11004-b31b1b.svg?logo=arxiv)](https://arxiv.org/abs/2510.11004) [![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Dataset-yellow)](https://huggingface.co/datasets/NateLiang/MASSE)
-
-[🔬 Analogy](#analogy-of-future-humanai-collaborations) | [🏗️ MASSE Framework](#masse-framework) | [⚡ Installation](#installation) | [🔑 Required APIs](#required-apis) | [📦 MASSE Package](#masse-package) | [🚀 Running an Example](#running-an-example) | [🎬 Demo](https://www.youtube.com/watch?v=G_22QBsevQ8) | [🤝 Contributing](#contributing) | [⚠️ Disclaimer](#disclaimer) | [📄 Citation](#citation)
+[![arXiv](https://img.shields.io/badge/arXiv-2510.11004-b31b1b.svg?logo=arxiv)](https://arxiv.org/abs/2510.11004) [![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Dataset-yellow)](https://huggingface.co/datasets/NateLiang/MASSE) [![YouTube](https://img.shields.io/badge/YouTube-Demo-red.svg?logo=youtube)](https://www.youtube.com/watch?v=G_22QBsevQ8)
 
 ## Analogy of future human-AI collaborations
 
