@@ -4,10 +4,9 @@
 
 ## Demo
 
-<video width="560" height="315" controls>
-  <source src="assets/demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[![Watch Demo Video](https://img.shields.io/badge/▶️-Watch%20Demo%20Video-red)](https://raw.githubusercontent.com/DelosLiang/masse/main/assets/demo.mp4)
+
+Click the button above to watch the demo video. The video will open in a new tab where you can play it directly in your browser.
 
 ## Analogy of future human-AI collaborations
 
