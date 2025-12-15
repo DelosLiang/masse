@@ -4,7 +4,10 @@
 
 ## Demo
 
-[![Watch the video](https://img.youtube.com/vi/G_22QBsevQ8/maxresdefault.jpg)](https://www.youtube.com/watch?v=G_22QBsevQ8)
+<video width="560" height="315" controls>
+  <source src="assets/demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## Analogy of future human-AI collaborations
 
