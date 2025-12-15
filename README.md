@@ -4,10 +4,7 @@
 
 ## Demo
 
-<video width="560" height="315" controls>
-  <source src="https://raw.githubusercontent.com/DelosLiang/masse/main/assets/demo.mp4" type="video/mp4">
-  Your browser does not support the video tag. [Click here to watch the video](https://raw.githubusercontent.com/DelosLiang/masse/main/assets/demo.mp4)
-</video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/G_22QBsevQ8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Analogy of future human-AI collaborations
 
